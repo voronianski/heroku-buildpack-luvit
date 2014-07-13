@@ -11,7 +11,7 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-LUVIT_URL="https://github.com/downloads/Skomski/heroku-buildpack-luvit/luvit"
+LUVIT_URL="https://github.com/norefle/heroku-buildpack-luvit/raw/master/luvit/luvit"
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 curl --silent -O --max-time 60 --location "$LUVIT_URL"
 
