@@ -11,7 +11,7 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-LUVIT_URL="https://raw.githubusercontent.com/luvit/luvit-releases/master/0.7.0/ubuntu13.04/x86_64/luvit-bundled"
+LUVIT_URL="https://github.com/downloads/Skomski/heroku-buildpack-luvit/luvit"
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 curl --silent -O --max-time 60 --location "$LUVIT_URL"
 
