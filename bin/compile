@@ -11,7 +11,7 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/ubuntu/luvit.tar.gz"
+LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/ubuntu/luvit"
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 echo "-----> From url $LUVIT_URL"
 
