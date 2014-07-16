@@ -21,7 +21,7 @@ curl --silent -O --max-time 60 --location "$LUVIT_URL"
 # make
 # make install
 
-#chmod +x luvit
+chmod +x luvit
 
 mkdir -p bin
 mv luvit bin/luvit
