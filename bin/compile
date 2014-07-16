@@ -4,14 +4,14 @@
 set -e
 set -o pipefail
 
-LUVIT_VERSION="0.7.0"
+LUVIT_VERSION="0.8.2"
 
 BUILD_DIR=$1
 CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/ubuntu13.04/x86_64/luvit"
+LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/luvit"
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 echo "-----> From url $LUVIT_URL"
 

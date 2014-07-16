@@ -26,4 +26,4 @@ The buildpack will detect your luvit app if it has the file `package.lua` in the
 Hacking
 -------
 
-To use this buildpack, fork it on Github.  Push up changes to your fork, then create a test app with `--buildpack <your-github-url>` and push to it.
+To use this buildpack, fork it on Github. Push up changes to your fork, then create a test app with ``--buildpack {your-github-url}`` and push to it.
