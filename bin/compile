@@ -9,19 +9,26 @@ LUVIT_VERSION="0.8.2"
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-cd $BUILD_DIR
+#cd $BUILD_DIR
 
-LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/ubuntu/luvit"
+LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/luvit-$LUVIT_VERSION.tar.gz"
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 echo "-----> From url $LUVIT_URL"
 
-curl --silent -O --max-time 60 --location "$LUVIT_URL"
+curl -s -o --max-time 60 --location "$LUVIT_URL" - | tar xzf - -C $BUILD_DIR
 # tar xvf luvit-$LUVIT_VERSION.tar.gz
 # cd luvit-$LUVIT_VERSION
 # make
 # make install
 
-chmod +x luvit
+mkdir -p $BUILD_DIR/vendor
+mv $BUILD_DIR/luvit-$LUVIT_VERSION $BUILD_DIR/vendor/luvit
+chmod +x $BUILD_DIR/vendor/luvit/bin/*
+PATH=$BUILD_DIR/vendor/luvit/bin:$PATH
 
-mkdir -p bin
-mv luvit bin/luvit
+cd $BUILD_DIR
+
+# chmod +x luvit
+
+# mkdir -p bin
+# mv luvit bin/luvit
