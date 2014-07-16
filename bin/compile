@@ -15,8 +15,8 @@ LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSI
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 echo "-----> From url $LUVIT_URL"
 
-curl "$LUVIT_URL" -s -o - | tar xvf - -C $BUILD_DIR
-# tar xvf luvit-$LUVIT_VERSION.tar.gz
+curl --silent -0 --max-time 60 --location "$LUVIT_URL"
+tar xvf luvit-$LUVIT_VERSION.tar.gz -C $BUILD_DIR
 # cd luvit-$LUVIT_VERSION
 # make
 # make install
