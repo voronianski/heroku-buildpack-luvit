@@ -11,13 +11,16 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/ubuntu/luvit"
+LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSION/luvit-$LUVIT_VERSION.tar.gz"
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 echo "-----> From url $LUVIT_URL"
 
-curl --silent -O --max-time 60 --location "$LUVIT_URL"
+curl --silent -O --max-time 60 --location "$LUVIT_URL" | tar zx
+cd luvit-$LUVIT_VERSION
+make
+make install
 
-chmod +x luvit
+#chmod +x luvit
 
-mkdir -p bin
-mv luvit bin/luvit
+#mkdir -p bin
+#mv luvit bin/luvit
