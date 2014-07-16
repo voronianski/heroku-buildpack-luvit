@@ -15,13 +15,13 @@ LUVIT_URL="https://github.com/voronianski/luvit-releases/raw/master/$LUVIT_VERSI
 echo "-----> Fetching Luvit version $LUVIT_VERSION"
 echo "-----> From url $LUVIT_URL"
 
-# curl --silent -O --max-time 60 --location "$LUVIT_URL"
+curl --silent -O --max-time 60 --location "$LUVIT_URL"
 # tar xvf luvit-$LUVIT_VERSION.tar.gz
 # cd luvit-$LUVIT_VERSION
 # make
 # make install
 
-chmod +x luvit
+#chmod +x luvit
 
 mkdir -p bin
 mv luvit bin/luvit
